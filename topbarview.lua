@@ -8,6 +8,8 @@ local View = require "core.view"
 
 -- TODO: change color of icons when cursor is hovering above them
 
+-- TODO: select by default pen icon
+
 -- TODO: contextmenu: button to clean whole view
 
 -- FIX: draw top black line only beneath tab title rectangle
