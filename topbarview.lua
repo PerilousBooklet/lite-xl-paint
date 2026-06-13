@@ -158,10 +158,11 @@ function TopbarView:each_item()
 		if index <= #self.topbar_items then
 			local dx, dy
 
-				dx = style.padding.x + (icon_w + topbar_spacing) * (index - 1)
-				dy = style.padding.y
+			dx = style.padding.x + (icon_w + topbar_spacing) * (index - 1)
+			dy = style.padding.y
 
-				if dx + icon_w > self.size.x then return end
+			if dx + icon_w > self.size.x then return end
+
 			return self.topbar_items[index], ox + dx, oy + dy, icon_w, icon_h
 		end
 	end
@@ -201,37 +202,37 @@ function TopbarView:draw()
 	end
 
 	-- WIP: Top line
-  local tab_x = self.position.x
-  local tab_w = 0
-  local node = core.root_view.root_node:get_node_for_view(self.paint_view)
-  if node then
-    -- We must subtract tab_offset in case the user has many tabs and the bar is scrolled
-    tab_x = node.position.x - (node.tab_offset or 0)
-    for _, view in ipairs(node.views) do
-      local w = 0
-      if node.get_tab_width then
-        w = node:get_tab_width(view)
-      else
-        -- Fallback: Use a wider padding multiplier (4x) to account for all sides
-        local icon_w = style.icon_font:get_width("x")
-        local text_w = style.font:get_width(view:get_name())
-        -- FIX: style.padding.x should be increased by ?
-        w = icon_w + text_w + (style.padding.x)
-      end
-      if view == self.paint_view then
-        tab_w = w
-        break
-      end
-      tab_x = tab_x + w
-    end
-  end
-  renderer.draw_rect(
-    tab_x,
-    self.position.y,
-    tab_w,
-    1,
-    { 0, 0, 0, 255 }
-  )
+  -- local tab_x = self.position.x
+  -- local tab_w = 0
+  -- local node = core.root_view.root_node:get_node_for_view(self.paint_view)
+  -- if node then
+  --   -- We must subtract tab_offset in case the user has many tabs and the bar is scrolled
+  --   tab_x = node.position.x - (node.tab_offset or 0)
+  --   for _, view in ipairs(node.views) do
+  --     local w = 0
+  --     if node.get_tab_width then
+  --       w = node:get_tab_width(view)
+  --     else
+  --       -- Fallback: Use a wider padding multiplier (4x) to account for all sides
+  --       local icon_w = style.icon_font:get_width("x")
+  --       local text_w = style.font:get_width(view:get_name())
+  --       -- FIX: style.padding.x should be increased by ?
+  --       w = icon_w + text_w + (style.padding.x)
+  --     end
+  --     if view == self.paint_view then
+  --       tab_w = w
+  --       break
+  --     end
+  --     tab_x = tab_x + w
+  --   end
+  -- end
+  -- renderer.draw_rect(
+  --   tab_x,
+  --   self.position.y,
+  --   tab_w,
+  --   1,
+  --   { 0, 0, 0, 255 }
+  -- )
 
 	-- Bottom line
 	renderer.draw_rect(
@@ -258,12 +259,12 @@ function TopbarView:on_mouse_pressed(button, x, y, clicks)
 
 	if self.hovered_item then
 		if self.hovered_item.action then
-        -- Change color
-        self.hovered_item.action()
-        -- Change current color selection
-        if self.hovered_item.color then
-        	self.active_color = self.hovered_item
-        end
+      -- Change color
+      self.hovered_item.action()
+      -- Change current color selection
+      if self.hovered_item.color then
+      	self.active_color = self.hovered_item
+      end
     elseif command.is_valid(self.hovered_item.command) then
         command.perform(self.hovered_item.command)
     end
@@ -297,5 +298,6 @@ function TopbarView:on_mouse_moved(px, py, ...)
 		self.tooltip = false
 	end
 end
+
 
 return TopbarView
