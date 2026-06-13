@@ -6,7 +6,7 @@ A simple painting plugin for Lite XL.
 
 ## Developer Setup
 
-Clone the repo on your system and run the `./run.sh` script to launch an instance of Lite XL with the `paint` installed.
+Clone the repo on your system and run the `./run.sh` script to launch an instance of Lite XL with the `paint` plugin installed.
 
 Once the instance is running, press `alt + z` to open a PaintView, or run the command `Paint: New Canvas`.
 
