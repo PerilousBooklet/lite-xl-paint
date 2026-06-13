@@ -1,0 +1,19 @@
+{
+  "addons": [
+    {
+      "id": "paint",
+      "mod_version": "3",
+      "version": "0.1.0",
+      "description": "A minimal Paint plugin for Lite XL.",
+      "path": ".",
+      "dependencies": { "font-paint": {} }
+    },
+    {
+			"id": "font-paint",
+			"version": "0.1.0",
+			"type": "font",
+			"path": "font/paint.ttf",
+			"description": "Icon font for the lite-xl-paint plugin."
+		}
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "name": "tabler-icons",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "d35a1d35efeb784d1dc9ac18b9b6c2b6",
+      "css": "pencil",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "fa9a0b7e788c2d78e24cef1de6b70e80",
+      "css": "brush",
+      "code": 61948,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "f4445feb55521283572ee88bc304f928",
+      "css": "save",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "895405dfac8a3b7b2f23b183c6608ee6",
+      "css": "export",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ebc57fa8400e4ede049ac5dc665210e1",
+      "css": "eraser",
+      "code": 61741,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "2c2ca8a96b31781c9c8056d05c0a8980",
+      "css": "square",
+      "code": 61640,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "130380e481a7defc690dfb24123a1f0c",
+      "css": "circle",
+      "code": 61713,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "bc71f4c6e53394d5ba46b063040014f1",
+      "css": "redo",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "f9c3205df26e7778abac86183aefdc99",
+      "css": "undo",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "750058837a91edae64b03d60fc7e81a7",
+      "css": "ellipsis-vert",
+      "code": 61762,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "107ce08c7231097c7447d8f4d059b55f",
+      "css": "ellipsis",
+      "code": 61761,
+      "src": "fontawesome"
+    }
+  ]
+}
